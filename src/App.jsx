@@ -6,7 +6,7 @@ import Card from './components/Card';
 
 function App() {
   const commitExample =
-    '```git commit -m “[이모지] ([브랜치이름]) 커밋할 내용”```';
+    '```git commit -m “[이모지] ([영문이름]/[브랜치이름]) 커밋할 내용”```';
 
   const secondCommitExample =
     '```git commit -m “:sparkles: (halam/feature/login/#23) 로그인 구현”```';
