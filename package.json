@@ -19,6 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://easy-commit-convention.halamlee.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
