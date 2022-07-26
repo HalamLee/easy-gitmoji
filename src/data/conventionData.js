@@ -123,7 +123,7 @@ const emojiData = [
     id: 16,
     emoji: '🚚',
     name: ':truck:',
-    description: 'Move or rename resources (e.g.: files, paths, routes).',
+    description: 'Move or rename resources.',
     descriptionKo: '파일 이동 또는 이름 변경',
     tag: ['all'],
   },
