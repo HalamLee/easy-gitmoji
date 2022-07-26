@@ -12,24 +12,46 @@ function App() {
     '```git commit -m “:sparkles: (halam/feature/login/#23) 로그인 구현”```';
 
   return (
-    <>
-      <Title>{'🤙🏻 Commit Convention'}</Title>
-      <Example children={commitExample} />
-      <Example children={secondCommitExample} />
-      {emojiData.map((data) => (
-        <Card key={data.id} data={data} />
-      ))}
-    </>
+    <Wrapper>
+      <Section>
+        <Title>{'🤙🏻 Commit Convention'}</Title>
+        <Example children={commitExample} />
+        <Example children={secondCommitExample} />
+      </Section>
+      <CardWrapper>
+        {emojiData.map((data) => (
+          <Card key={data.id} data={data} />
+        ))}
+      </CardWrapper>
+    </Wrapper>
   );
 }
 
 export default App;
 
-const Title = styled.h1``;
+const Wrapper = styled.div`
+  width: fit-content;
+  height: fit-content;
+`;
+
+const Section = styled.div`
+  padding: 20px 0 0 20px;
+`;
+
+const Title = styled.h1`
+  color: white;
+  margin-top: 0;
+`;
 const Example = styled(ReactMarkdown)`
   width: fit-content;
   padding: 0 7px;
-  background-color: #eee;
+  color: white;
   border-radius: 5px;
   font-size: 20px;
+`;
+
+const CardWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
