@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-function Card({ data }) {
-  const [emoji, setEmoji] = useState();
-
-  useEffect(() => {
-    if (emoji) {
-      navigator.clipboard.writeText(emoji);
-    }
-  }, [emoji]);
-
-  const clickHandler = () => {
-    setEmoji(data.name);
+function Card({ data, clickedEmoji }) {
+  const onClick = () => {
+    clickedEmoji(data.name);
   };
 
   return (
-    <Wrapper onClick={() => clickHandler()}>
+    <Wrapper onClick={onClick}>
       <Title>
         <Emoji>{data.emoji}</Emoji>
         <Name>{data.name}</Name>

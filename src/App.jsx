@@ -4,7 +4,31 @@ import ReactMarkdown from 'react-markdown';
 import emojiData from './data/conventionData';
 import Card from './components/Card';
 
+import Snackbar from './components/Snackbar';
+import { useState } from 'react';
+
 function App() {
+  const [snackbarIsOpen, setSnackbarIsOpen] = useState(false);
+  const [copyResult, setCopyResult] = useState('');
+  const [emoji, setEmoji] = useState('');
+
+  const clickedEmoji = (emoji) => {
+    getSnackbarState(true);
+    setEmoji(emoji);
+    navigator.clipboard
+      .writeText(emoji)
+      .then(() => {
+        setCopyResult('success');
+      })
+      .catch(() => {
+        setCopyResult('error');
+      });
+  };
+
+  const getSnackbarState = (open) => {
+    setSnackbarIsOpen(open);
+  };
+
   const commitExample =
     '```git commit -m “[이모지] ([영문이름]/[브랜치이름]) 커밋할 내용”```';
 
@@ -20,9 +44,15 @@ function App() {
       </Section>
       <CardWrapper>
         {emojiData.map((data) => (
-          <Card key={data.id} data={data} />
+          <Card key={data.id} data={data} clickedEmoji={clickedEmoji} />
         ))}
       </CardWrapper>
+      <Snackbar
+        result={copyResult}
+        open={snackbarIsOpen}
+        getSnackbarState={getSnackbarState}
+        data={emoji}
+      />
     </Wrapper>
   );
 }
