@@ -1,3 +1,7 @@
-# Easy commit convention
+# Easy Gitmoji
 
-### ✨ ILGOB 프로젝트에서 사용하는 커밋 컨벤션을 편하게 사용하기 위해 만든 미니 프로젝트 ✨
+### ✨ Gitmoji를 조금 더 편하게 사용하기 위해 만든 사이트 ✨
+
+- [easy-gitmoji](https://easy-gitmoji.halamlee.com/)
+
+- [gitmoji](https://gitmoji.dev/)
