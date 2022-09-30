@@ -38,7 +38,7 @@ function App() {
   return (
     <Wrapper>
       <Section>
-        <Title>{'🤙🏻 Commit Convention'}</Title>
+        <Title>{'😉 Easy Gitmoji'}</Title>
         <Example children={commitExample} />
         <Example children={secondCommitExample} />
       </Section>
