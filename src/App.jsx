@@ -29,19 +29,19 @@ function App() {
     setSnackbarIsOpen(open);
   };
 
-  const commitExample =
-    '```git commit -m “[이모지] ([영문이름]/[브랜치이름]) 커밋할 내용”```';
-
-  const secondCommitExample =
-    '```git commit -m “:sparkles: (halam/feature/login/#23) 로그인 구현”```';
-
   return (
     <Wrapper>
-      <Section>
+      <Header>
         <Title>{'😉 Easy Gitmoji'}</Title>
-        <Example children={commitExample} />
-        <Example children={secondCommitExample} />
-      </Section>
+        <Info>
+          <a href="https://github.com/HalamLee">
+            <img src="https://img.shields.io/badge/Github-white?style=flat&logo=Github&logoColor=black" />
+          </a>
+          <a href="https://hits.seeyoufarm.com">
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Feasy-gitmoji.halamlee.com&count_bg=%23486FA6&title_bg=%237E7E7E&title=hits&edge_flat=false" />
+          </a>
+        </Info>
+      </Header>
       <CardWrapper>
         {emojiData.map((data) => (
           <Card key={data.id} data={data} clickedEmoji={clickedEmoji} />
@@ -60,24 +60,25 @@ function App() {
 export default App;
 
 const Wrapper = styled.div`
-  width: fit-content;
-  height: fit-content;
+  width: 100vw;
+  height: 100vh;
 `;
 
-const Section = styled.div`
+const Header = styled.div`
   padding: 20px 0 0 20px;
+  margin-bottom: 20px;
 `;
 
 const Title = styled.h1`
   color: white;
   margin-top: 0;
 `;
-const Example = styled(ReactMarkdown)`
-  width: fit-content;
-  padding: 0 7px;
-  color: white;
-  border-radius: 5px;
-  font-size: 20px;
+
+const Info = styled.div`
+  padding-left: 10px;
+  > :first-child {
+    margin-right: 10px;
+  }
 `;
 
 const CardWrapper = styled.div`
