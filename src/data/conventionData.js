@@ -215,6 +215,14 @@ const emojiData = [
     descriptionKo: '배포',
     tag: ['all'],
   },
+  {
+    id: 28,
+    emoji: '✅',
+    name: ':white_check_mark:',
+    description: 'Add, update, or pass tests.',
+    descriptionKo: '통과하는 테스트 코드 추가 또는 업데이트',
+    tag: ['all', 'test'],
+  },
 ];
 
 export default emojiData;
