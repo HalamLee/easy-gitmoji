@@ -223,6 +223,14 @@ const emojiData = [
     descriptionKo: '통과하는 테스트 코드 추가 또는 업데이트',
     tag: ['all', 'test'],
   },
+  {
+    id: 29,
+    emoji: '🧪',
+    name: ':test_tube:',
+    description: 'Add a failing test.',
+    descriptionKo: '실패하는 테스트 코드 추가',
+    tag: ['all', 'test'],
+  },
 ];
 
 export default emojiData;
