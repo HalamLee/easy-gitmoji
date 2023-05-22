@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
-import emojiData from './data/conventionData';
-import Card from './components/Card';
+import emojiData from '../src/data/conventionData';
+import Card from '../src/components/Card';
 
-import Snackbar from './components/Snackbar';
+import Snackbar from '../src/components/Snackbar';
 import { useState } from 'react';
 
 function App() {
