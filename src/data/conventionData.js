@@ -231,6 +231,14 @@ const emojiData = [
     descriptionKo: '실패하는 테스트 코드 추가',
     tag: ['all', 'test'],
   },
+  {
+    id: 30,
+    emoji: '♿',
+    name: ':wheelchair:',
+    description: 'Improve accessibility.',
+    descriptionKo: '접근성 향상',
+    tag: ['all', 'accessibility'],
+  },
 ];
 
 export default emojiData;
